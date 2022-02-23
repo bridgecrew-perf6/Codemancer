@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Task No. </th>
+        <th scope="col">Title</th>
+        <th scope="col">Desc</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for task in tasks %}
+        <tr>
+            <th scope="row">{{ task.id }}</th>
+            <td>{{ task.taskTitle }}</td>
+            <td>{{ task.taskDesc }}</td>
+            <td><a href="/update/{{task.id}}"><button type="button" class="btn btn-primary btn-sm" >Update</button></a>
+            <td><a href="/delete/{{task.id}}"><button type="button" class="btn btn-danger btn-sm" >Delete</button></a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+  </table>
+
+{% endblock %}
