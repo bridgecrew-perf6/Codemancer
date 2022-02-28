@@ -13,7 +13,7 @@
     <tbody>
         {% for task in tasks %}
         <tr>
-            <th scope="row">{{ task.id }}</th>
+            <th scope="row">{{ forloop.counter }}</th>
             <td>{{ task.taskTitle }}</td>
             <td>{{ task.taskDesc }}</td>
             <td><a href="/update/{{task.id}}"><button type="button" class="btn btn-primary btn-sm" >Update</button></a>
