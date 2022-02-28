@@ -14,6 +14,7 @@ def home(request):
 def tasks(request):
     allTasks = Task.objects.all()
     context = {'tasks':allTasks}
+    print(allTasks[0].taskTitle)
     return render(request, 'tasks.html',context)
 def update(request, id):
     task = Task.objects.get(id=id)
