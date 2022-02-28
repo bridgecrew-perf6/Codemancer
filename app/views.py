@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7edfb839b88bd185b8ca36c171322d41b99592ce
 from django.shortcuts import render,redirect,get_object_or_404
 from  . models import Task
 # Create your views here.
